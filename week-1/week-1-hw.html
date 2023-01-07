@@ -1,0 +1,123 @@
+<!DOCTYPE html>                                                                
+<html lang="zh-TW">                        
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>     
+  <title>蛋捲抽抽樂</title>
+  <style>
+    /*初始畫面_框架*/
+    body{
+      background-color: rgb(205, 255, 219);
+    }
+    .navigator{               /*container*/
+      display: flex;
+      justify-content: space-around; 
+    }
+    .logo{              /*item*/
+      background-color: rgb(0, 255, 123);
+      margin-right: auto;
+      margin-left: 20px;
+      padding: 0px 10px 0px 10px;
+    }
+    .menu{              /*item*/
+      background-color: red;
+      text-align: center;
+      width: 10%;
+    }
+    .outer{
+      background-color: rgb(16, 16, 60);
+      margin: auto;
+      text-align: center;
+    }
+    .welcome{
+      background-color: pink;
+      width: 600px;
+      height: 200px;
+      font-size: 30px;
+      /* margin: auto; */
+      
+      margin-left: 90px;
+      text-align: right;
+      display: table-cell;
+      vertical-align: middle;
+      
+    }
+    .welcome_inner{
+      background-color: blue;
+      /* margin: auto; */
+      margin: auto;
+      text-align: center;
+    }
+
+    .section_title{
+      text-align: center;
+      font-size: 24px;
+    }
+    .boxes{
+/*    /* background-color: green; */
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      margin: auto;
+      max-width: 1200px;
+    }
+    .section{
+      background-color: grey; 
+      margin: auto;
+    }
+    .box{
+      width: 45%;
+      min-width: 400px;
+      height: 50px;
+      text-align: center;
+      margin: 10px;
+    }
+
+    .button{
+      background-color: blue;
+      width: 100px;
+      text-align: center;
+      margin: auto;
+      padding: 5px;
+    }
+
+  </style>
+</head>
+
+<body>
+  
+  <div>
+    <div class="navigator">
+      <div class="logo">Website Title/logo</div>
+      <div class="menu">Item 1</div>
+      <div class="menu">Item 2</div>
+      <div class="menu">Item 3</div>
+      <div class="menu">Item 4</div>
+    </div>
+  </div>
+
+  <div class="outer">
+    <div class="welcome">
+      <div class="welcome_inner">
+         Welcome Message
+      </div>
+    </div>
+  </div>
+
+
+  <div>
+      <div class="section_title">Section Title</div>
+      <div class="boxes">
+      <div class="section box">Content Box 1</div>
+      <div class="section box">Content Box 2</div>
+      <div class="section box">Content Box 3</div>
+      <div class="section box">Content Box 5</div>
+      </div>
+  </div>
+
+  <div class="button">
+    Call to Action
+  </div>
+
+</body>
+
+</html>
