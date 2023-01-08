@@ -1,47 +1,57 @@
-body{
-    background-color: rgb(255, 255, 255);
-    font-family: 'Liberation Serif', serif;
-    font-size: 16px;
+  *{
+    box-sizing: border-box;
   }
+
+  html{
+    font-size: 1em; 
+  }
+
+  body{
+      background-color: rgb(255, 255, 255);
+      font-family: 'Liberation Serif', serif;
+      /* font-size: 16px; */
+    }
   
   /*--------導引列--------*/
-  .navigator{                        
+  .header_container{                        
     display: flex;
     justify-content: space-around; 
     align-items: center;
     background-color: rgb(238, 238, 238);
     height: 55px;
   }
-  .logo{                    
+  h2{                    
     margin-right: auto;
     margin-left: 30px; 
-    padding: 0px 10px 0px 10px;    
+    padding: 0px 10px 0px 10px;
+    font-size: 1em;
+    font-weight: normal;
   }
   .menu_icon{      
     text-align: center;
     width: 10%;              
-    font-size: 24px;
+    font-size: 1.5em;
   }
   .menu{                    
     display: none;
   }
 
   /*-------歡迎訊息-------*/
-  .welcome_container{                
+  .h1_container{                
     display: flex;
     background-color: rgb(204,221,238);
     height: 200px;
   }
-  .welcome{
+  h1{
     margin: auto;
-    font-size: 32px;
+    font-size: 2em;
     font-weight: bold;
   }
 
   /*-----段落標題＋箱子------*/
-  .section_title{            
+  h3{            
     text-align: center;
-    font-size: 24px;
+    font-size: 1.5em;
     font-weight: bold;
     margin:12px;
   }
@@ -61,7 +71,7 @@ body{
   }
   
   /*------底部按鈕------*/
-  .bottom{                         
+  footer{                         
     width: 125px;
     height: 48px;
     margin: auto;
