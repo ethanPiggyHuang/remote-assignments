@@ -1,7 +1,8 @@
 /*-------歡迎訊息變動-------*/
+const h1_container = document.getElementsByClassName('h1_container');
 const message = document.getElementById('message');
 
-message.addEventListener("click", () => {
+h1_container[0].addEventListener("click", () => {
   message.textContent = 'Have a Good Time!'
 });
 
