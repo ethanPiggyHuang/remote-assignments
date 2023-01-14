@@ -46,14 +46,15 @@
     border: 1px solid rgb(170, 170, 170);
     background-color: rgb(238, 238, 238);
     display: none;
+    height: 100vh;
   }
   li{
     list-style-type: none;
-    padding: 1em 3em 1em 1.5em;
+    padding: 1em 5em 1em 0.5em;
   }
   .menu_close{
     background-color: rgba(0,0,0,0);
-    padding: 1em 0.5em;
+    padding: 1em 5vw;
     border: none;
     display: none;
   }

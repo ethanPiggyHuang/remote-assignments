@@ -1,7 +1,7 @@
 function calculate(data) {
     let totalPrice = 0;
     for(let i=0; i<data.products.length; i++){
-      var itemPrice = (1-data.discount) * data.products[i].price;
+      let itemPrice = (1-data.discount) * data.products[i].price;
       console.log(`${data.products[i].name} after discount: ${itemPrice}`);
       totalPrice += itemPrice;
     }
