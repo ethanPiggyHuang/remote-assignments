@@ -1,6 +1,6 @@
 function twoSum(nums, target) {
-  var ans = [];
-  var diff = 0;
+  let ans = [];
+  let diff;
   for(let i=0; i< nums.length; i++){  
     if(nums[i]<target){                     //確認陣列數字比目標數字小，否則跳過
       diff = target - nums[i];              //計算差值
