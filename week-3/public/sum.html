@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sum of Integers</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Sum of Integers</h1>
+      <h3>an app to sum integers</h3>
+    </header>
+    <section id="form">
+      <h2>Please Enter a positive integer</h2>
+      <form>
+        <input type="text" name="input" id="input">
+      </form>
+      <button id="submit">submit</button>
+    </section>
+    <section id="result">
+    </section>
+  </body>
+
+    <script>
+      // 顯示向 server request 之後的結果
+      function displayResponse (num){
+        let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            const sum = this.responseText;
+            document.getElementById("result").innerHTML = `<h2>The sum of integers from 1 to ${num} is </h2><h1>${sum.slice(3,-4)}</h1>`;
+          }
+        };
+        xhttp.open("GET", `http://localhost:3000/getData?number=${num}`);
+        xhttp.send();
+      }
+      // 監聽 event
+      const input = document.querySelector('#input');
+      const submit = document.querySelector('#submit'); 
+      submit.addEventListener('click', () =>{
+        displayResponse (input.value);
+      })
+    </script>
+
+  </body>
+</html>
