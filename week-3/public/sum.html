@@ -25,15 +25,11 @@
     <script>
       // 顯示向 server request 之後的結果
       function displayResponse (num){
-        let xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            const sum = this.responseText;
-            document.getElementById("result").innerHTML = `<h2>The sum of integers from 1 to ${num} is </h2><h1>${sum.slice(3,-4)}</h1>`;
-          }
-        };
-        xhttp.open("GET", `http://localhost:3000/getData?number=${num}`);
-        xhttp.send();
+        fetch(`http://localhost:3000/getData?number=${num}`)
+        .then( (response) => response.text())
+        .then( (data) => {
+          document.getElementById('result').innerHTML = `<h2>The sum of integers from 1 to ${num} is </h2><h1>${data.slice(3,-4)}</h1>`;
+        });
       }
       // 監聽 event
       const input = document.querySelector('#input');

@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 
 app.get('/getData', (req, res) => {
   const numberString = req.query.number;
-  const number = parseInt(numberString);
+  const number = Number(numberString);
   let sum = 0;
   let message = '';
   if (!numberString){
@@ -24,7 +24,7 @@ app.get('/getData', (req, res) => {
   } else if (isNaN(number)){
     message = 'Wrong Parameter';
   } else {
-    for(let i=1; i<=parseInt(number) ; i++){
+    for(let i=1; i<=number ; i++){
       sum += i;
     }
   }
