@@ -1,3 +1,4 @@
+
 /* -----------------
   Component Header
 ------------------ */
@@ -27,6 +28,12 @@ const Header = () => {
 ---------------------- */
 
 const MainMessage = () => {
+  // const [ message, setMessage ] = useState('Welcom');
+  
+  // useEffect(() => {
+  //   console.log('useEffect called!');   
+  // },[ score ]);
+
   return (
     <section className="h1_container">
       <h1 id="message">
@@ -36,20 +43,20 @@ const MainMessage = () => {
   )
 }
 
-/* ---------------------
-  Component MainMessage
----------------------- */
-const boxes = (start, num) => {
+/* ------------------
+  Component Content
+------------------- */
+const boxArray = (start, num) => {
   let boxes = [];
   for(let i=0; i<num; i++){
-    boxes.push({title:`Content Box ${start+i}`, text:'kkk',id:`${start+i}`});
+    boxes.push({title:`Content Box ${ start+i }`, text:'kkk',id:`${ start+i }`});
   }
   return boxes;
 }
 
 const Content = () => {
-  const boxes_initial = boxes(1,4);
-  const boxes_hidden = boxes(5,4);
+  const boxes_initial = boxArray(1,4);
+  const boxes_extend = boxArray(5,4);
 
   return (
     <section>
@@ -67,8 +74,8 @@ const Content = () => {
       <div className="button_container">
         <button className="click_button">Call to Action</button>
       </div>
-      <div className="box_container ">
-        {boxes_hidden.map( (box,index) =>
+      <div className="box_container extend">
+        {boxes_extend.map( (box,index) =>
           <ContentBox 
             title={box.title}
             text={box.text}
@@ -90,6 +97,9 @@ const ContentBox = ( props ) => {
   )
 }
 
+/* ------------
+   Main App
+------------ */
 
 const App = () => {
   return (

@@ -32,7 +32,7 @@ h2{
   font-size: 1.5em;
 }
 
-.menu, .menu_close{
+.menu, #menu_closeIcon{
   position:fixed;
   top: 0;
   right: 0;
@@ -50,7 +50,7 @@ li{
   list-style-type: none;
   padding: 1em 5em 1em 0.5em;
 }
-.menu_close{
+#menu_closeIcon{
   background-color: rgba(0,0,0,0);
   padding: 1em 5vw;
   border: none;
@@ -90,7 +90,7 @@ h3{
   margin: 0 0 calc(500px /0.9 *0.015)  0;
   padding-top: 1vh;
 }
-.extend{
+#extend{
   display: none;
 }
 .box_title{
@@ -138,7 +138,6 @@ h3{
     position:relative;  
     text-align: center;
     width: default;
-    display: flex;
     top: default;
     right: default;
 
