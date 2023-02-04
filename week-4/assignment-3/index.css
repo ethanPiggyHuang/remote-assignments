@@ -93,6 +93,9 @@ h3{
 .hidden{
   display: none;
 }
+.box_title{
+  margin: 0;
+}
 
 /*------底部按鈕------*/
 .button_container{                         

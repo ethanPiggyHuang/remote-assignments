@@ -1,5 +1,6 @@
-import MainMessage from './MainMessage.js';
-// import Content from './component/Content';
+/* -----------------
+  Component Header
+------------------ */
 
 const Header = () => {
   return (
@@ -21,13 +22,81 @@ const Header = () => {
   );
 }
 
+/* ---------------------
+  Component MainMessage
+---------------------- */
+
+const MainMessage = () => {
+  return (
+    <section className="h1_container">
+      <h1 id="message">
+        Welcome Message
+      </h1>
+    </section>
+  )
+}
+
+/* ---------------------
+  Component MainMessage
+---------------------- */
+const boxes = (start, num) => {
+  let boxes = [];
+  for(let i=0; i<num; i++){
+    boxes.push({title:`Content Box ${start+i}`, text:'kkk',id:`${start+i}`});
+  }
+  return boxes;
+}
+
+const Content = () => {
+  const boxes_initial = boxes(1,4);
+  const boxes_hidden = boxes(5,4);
+
+  return (
+    <section>
+      <h3>Section Title</h3>
+      <div className="box_container">
+        {boxes_initial.map( (box,index) =>
+          <ContentBox 
+            title={box.title}
+            text={box.text}
+            id={box.id}
+            key={box.id}
+          />  
+        )}
+      </div>
+      <div className="button_container">
+        <button className="click_button">Call to Action</button>
+      </div>
+      <div className="box_container ">
+        {boxes_hidden.map( (box,index) =>
+          <ContentBox 
+            title={box.title}
+            text={box.text}
+            id={box.id}
+            key={box.id}
+          />  
+        )}
+      </div>
+    </section>
+  )
+}
+
+const ContentBox = ( props ) => {
+  return (
+    <div className="box">
+      <p className="box_title">{ props.title }</p>
+      <p>{ props.text }</p>
+    </div>
+  )
+}
+
 
 const App = () => {
   return (
     <div>
       <Header />
-      {/* <MainMessage /> */}
-      {/* <Content /> */}
+      <MainMessage />
+      <Content />
     </div>
   );
 }
