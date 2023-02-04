@@ -4,13 +4,11 @@ function ajax(url) {
     fetch(url)
       .then( (response) => response.text())
   );    
-  console.log('pause');
 }
 
 function render(data) {
   // your code here
   data = JSON.parse(data);
-  console.log(data);
 
   const Text = () => {
     return(
