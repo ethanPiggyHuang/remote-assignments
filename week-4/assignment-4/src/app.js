@@ -43,12 +43,12 @@ function render(data) {
             {this.state.display.map( product =>
               <div className="flex-item">
                 <div className="inner-row">
-                  <p id="name">{ product.name }</p>
-                  <p id="visibility">{ product.visibility }</p>
+                  <p className="name">{ product.name }</p>
+                  <p className="visibility">{ product.visibility }</p>
                 </div>
-                <p id="description">{ product.description }</p>
+                <p className="description">{ product.description }</p>
                 <div className="inner-row">
-                  {product.topics.map( topic => <p id="topic">{ topic }</p>)}
+                  {product.topics.map( topic => <p className="topic">{ topic }</p>)}
                 </div>
               </div>
             )}

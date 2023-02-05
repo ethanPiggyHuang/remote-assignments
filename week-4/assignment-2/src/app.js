@@ -3,13 +3,12 @@ function ajax(url) {
   return(
     fetch(url)
       .then( (response) => response.text())
+      .then( (data) => data = JSON.parse(data))
   );    
 }
 
 function render(data) {
   // your code here
-  data = JSON.parse(data);
-
   const Text = () => {
     return(
       <div className="flex-container">

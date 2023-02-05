@@ -46,8 +46,8 @@ h2 {
   border-bottom: 1.5px solid rgb(217,224,229)
 }
 
-.flex-container :last-child {
-  border-bottom: none 
+.flex-item:last-child {
+  border-bottom: none;
 }
 
 .inner-row {
@@ -58,14 +58,15 @@ p {
   margin: 2px 10px;
 }
 
-#name {
+.name {
   font-size: 1.2em;
   font-weight: bold;
   color: rgb(39,122,222);
 }
 
-#visibility {
+.visibility {
   margin-left: 2px;
+  margin-bottom: 4px;
   border: 1.5px solid rgb(217,224,229);
   border-radius: 1em;
   padding: 0.2em 0.5em;
@@ -74,11 +75,11 @@ p {
   color: rgb(99,108,117);
 }
 
-#description {
+.description {
   color: rgb(99,108,117);
 }
 
-#topic {
+.topic {
   margin: 10px 2px 5px;
   border-radius: 1em;  
   padding: 0.4em 0.8em;
