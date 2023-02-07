@@ -1,0 +1,57 @@
+/*!********************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./public/index.css ***!
+  \********************************************************************/
+body,
+html {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	/* align-items: center; */
+	/* justify-content: center; */
+	background: linear-gradient(45deg, #788ff5, #1deeee);
+}
+
+#root {
+	font-size: 16px;
+	color: rgb(0, 0, 0);
+}
+
+.number {
+	flex-grow: 1;
+
+	height: 30px;
+
+	display: flex;
+	align-items: center;
+	text-align: center;
+}
+
+p {
+	flex-grow: 1;
+}
+
+button {
+	height: 30px;
+}
+
+.counter {
+	display: flex;
+	align-items: center;
+
+	padding: 10px 0;
+}
+
+
+.all-plus {
+  width: 70px;
+  margin-bottom: 10px;
+}
+
+.add-one {
+	width: 70px;
+}
+
+.add-counter {
+	width: 150px;
+	margin-top: 20px;
+}
