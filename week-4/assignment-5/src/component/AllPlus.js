@@ -8,7 +8,6 @@ const AllPlus = (props) => {
   return (
     <button className="all-plus" onClick={ handleClick } >All + 1</button>
   );
-
 }
 
 export default AllPlus;

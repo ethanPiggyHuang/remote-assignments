@@ -1,26 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import AddButton from './AddButton';
-import Counter from './Counter';
+import React, { useState } from 'react';
 import AllPlus from './AllPlus';
+import Counter from './Counter';
+import AddCounter from './AddCounter';
 
 const CounterBundle = () => {
-  const [ counterNum, setCounterNum ] = useState(3);
-  const [ num, setNum ] = useState([0,0]);
-
-  const counterArray = [];
-
-  useEffect(() => {
-    setNum([...num,0]);
-  },[counterNum]);
-
-  for (let i=0; i<counterNum; i++){
-    counterArray.push(<Counter 
-      key = { i } 
-      index = { i }
-      num = { num }
-      setNum = { setNum }
-      />)
-  }
+  const [ num, setNum ] = useState([0,0,0]);
 
   return (
     <div>
@@ -28,10 +12,19 @@ const CounterBundle = () => {
         num = { num }
         setNum = { setNum } 
       />
-      { counterArray }
-      <AddButton 
-        number = { counterNum }
-        setNumber = { setCounterNum }
+      {
+        num.map((aCounter, index) => 
+          <Counter 
+            key = { index } 
+            index = { index } 
+            num = { num } 
+            setNum = { setNum } 
+          />
+        )
+      }
+      <AddCounter 
+        num = { num }
+        setNum = { setNum } 
       />
     </div>
   );

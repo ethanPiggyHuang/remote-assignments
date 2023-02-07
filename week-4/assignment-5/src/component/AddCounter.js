@@ -1,8 +1,8 @@
 import React from 'react';
 
-const AddButton = (props) => {
+const AddCounter = (props) => {
   const handleCounterNum = () => {
-      props.setNumber(prev => prev+1);
+      props.setNum([...props.num,0]);
   }
 
   return (
@@ -10,4 +10,4 @@ const AddButton = (props) => {
   );
 }
 
-export default AddButton;
+export default AddCounter;
